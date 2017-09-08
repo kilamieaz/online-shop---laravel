@@ -1,21 +1,21 @@
 <!-- jQuery 3 -->
-<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+{!! Html::script('assets/bower_components/jquery/dist/jquery.min.js') !!}
 <!-- Bootstrap 3.3.7 -->
-<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+{!! Html::script('assets/bower_components/bootstrap/dist/js/bootstrap.min.js') !!}
 <!-- FastClick -->
-<script src="assets/bower_components/fastclick/lib/fastclick.js"></script>
+{!! Html::script('assets/bower_components/fastclick/lib/fastclick.js') !!}
 <!-- AdminLTE App -->
-<script src="assets/dist/js/adminlte.min.js"></script>
+{!! Html::script('assets/dist/js/adminlte.min.js') !!}
 <!-- Sparkline -->
-<script src="assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+{!! Html::script('assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js') !!}
 <!-- jvectormap  -->
-<script src="assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+{!! Html::script('assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') !!}
+{!! Html::script('assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') !!}
 <!-- SlimScroll -->
-<script src="assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+{!! Html::script('assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') !!}
 <!-- ChartJS -->
-<script src="assets/bower_components/Chart.js/Chart.js"></script>
+{!! Html::script('assets/bower_components/Chart.js/Chart.js') !!}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="assets/dist/js/pages/dashboard2.js"></script>
+{!! Html::script('assets/dist/js/pages/dashboard2.js') !!}
 <!-- AdminLTE for demo purposes -->
-<script src="assets/dist/js/demo.js"></script>
+{!! Html::script('assets/dist/js/demo.js') !!}

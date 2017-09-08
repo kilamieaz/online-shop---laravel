@@ -6,18 +6,18 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.7 -->
-<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+{!! Html::style('/assets/bower_components/bootstrap/dist/css/bootstrap.min.css') !!}
 <!-- Font Awesome -->
-<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+{!! Html::style('assets/bower_components/font-awesome/css/font-awesome.min.css') !!}
 <!-- Ionicons -->
-<link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+{!! Html::style('assets/bower_components/Ionicons/css/ionicons.min.css') !!}
 <!-- jvectormap -->
-<link rel="stylesheet" href="assets/bower_components/jvectormap/jquery-jvectormap.css">
+{!! Html::style('assets/bower_components/jvectormap/jquery-jvectormap.css') !!}
 <!-- Theme style -->
-<link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+{!! Html::style('assets/dist/css/AdminLTE.min.css') !!}
 <!-- AdminLTE Skins. Choose a skin from the css/skins
      folder instead of downloading all of them to reduce the load. -->
-<link rel="stylesheet" href="assets/dist/css/skins/_all-skins.min.css">
+{!! Html::style('assets/dist/css/skins/_all-skins.min.css') !!}
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,28 +36,10 @@
       @include('layouts.admin.header')
       <div class="wrapper">
         <div class="content-wrapper">
-          <section class="content-header">
-            <h1>Dashboard</h1>
-            <ol class="breadcrumb">
-              <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-              <li class="active">Dashboard</li>
-            </ol>
-          </section>        
-
-           @if(Session::has('message'))
-              <div class="alert alert-info">
-                  <p>{{ Session::get('message') }}</p>
-              </div>
-           @endif
-
-          <section class='content'>
-          <div class="container">
-            <div class='row'>
-                @yield('content')
-            </div>
+          <div class="col-md-12">
+            @include('layouts._flash')
+            @yield('content')
           </div>
-          </section>
-          
         </div>
         @include('layouts.admin.footer')
       </div>

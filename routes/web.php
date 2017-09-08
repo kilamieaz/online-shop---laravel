@@ -26,5 +26,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','role:superadmin']], 
     Route::get('/',function () {
         return view('admin.index');
     })->name('admin.index');
+    Route::resource('product','ProductsController');
 });
 // Route::get('/kategori', 'KategoriController@index');

@@ -1,10 +1,10 @@
 <header class="main-header">
   <a href="home.php" class="logo">
-    <span class="logo-mini"><b>APL</b></span>
-    <span class="logo-lg"><b>ADMIN PANEL</b></span>
+    <span class="logo-mini"><b>IT</b>S</span>
+    <span class="logo-lg"><b>IT</b>Store</span>
   </a>
   <nav class="navbar navbar-static-top" role="navigation">
-    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
       <span class="sr-only">Toggle navigation</span>
     </a>
     <div class="navbar-custom-menu">
@@ -16,16 +16,16 @@
         </li>
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            {{--  <img src="../images/admin.png" width="160px" height="160px" class="user-image" alt="User Image"/>  --}}
+            {!! Form::image('/image/admin.png',null,['width' => '160', 'height' => '160', 'class' => 'user-image', 'alt' => 'User Image']) !!}
             <span class="hidden-xs">
-              Halo admin
+              Halo {{Auth::user()->name}}
             </span>
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
-              {{--  <img src="#" class="img-circle" alt="User Image" />  --}}
+              {!! Form::image('/image/admin.png',null,['width' => '100', 'height' => '100','class' => 'img-circle', 'alt' => 'User Image']) !!}
               <p>
-                ADMIN
+                superadmin
               </p>   
             </li>
             <li class="user-body">
@@ -45,18 +45,6 @@
   </nav>
 </header>
 
-<!-- Kolom Sebelah Kiri -->
-<aside class="main-sidebar">
-  <!-- sidebar: style can be found in sidebar.less -->
-  <section class="sidebar">
-    <!-- Sidebar user panel -->
-    <div class="user-panel">
-      {{--  <div class="pull-left image"><img src="../images/admin.png" class="img-circle" alt="User Image"/></div>  --}}
-      <div class="pull-left info">
-        <p>Sultan</p>
-      </div>
-    </div>
-    
     @include('layouts.admin.leftbar')
 
   </section>
