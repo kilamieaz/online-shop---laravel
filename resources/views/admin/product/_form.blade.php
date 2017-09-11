@@ -13,6 +13,13 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('price', 'Price', ['class'=>'col-md-2 control-label']) !!}
+    <div class="col-md-4">
+        {!! Form::text('price', null, ['class' => 'form-control']) !!}
+    </div>
+</div>
+
+<div class="form-group">
     {!! Form::label('size', 'Size', ['class'=>'col-md-2 control-label']) !!}
     <div class="col-md-4">
         {!! Form::select('size', ['small' => 'Small', 'medium' => 'Medium', 'large' => 'Large'], null, ['class' => 'form-control']) !!}
@@ -22,7 +29,7 @@
 <div class="form-group">
     {!! Form::label('category_id', 'Categories', ['class'=>'col-md-2 control-label']) !!}
     <div class="col-md-4">
-        {!! Form::select('category_id', [1=>'men'], null, ['class' => 'form-control', 'placeholder' => 'Select Category']) !!}
+        {!! Form::select('category_id', $categories, null, ['class' => 'form-control', 'placeholder' => 'Select Category']) !!}
     </div>
 </div>
 

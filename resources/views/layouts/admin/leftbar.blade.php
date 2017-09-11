@@ -40,18 +40,32 @@
         </li>
 
         <li class="treeview">
-          <a href="#">
+          <a>
             <i class="fa fa-files-o"></i>
             <span>Product</span>
             <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
+              <span class="label label-primary pull-right">2</span>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Add Product</a></li>
+            <li><a href="{{ Route('product.index') }}"><i class="fa fa-circle-o"></i> Products </a></li>
+            <li><a href="{{ Route('product.create') }}"><i class="fa fa-circle-o"></i> Add Product</a></li>
           </ul>
         </li>
-        
+
+        <li class="treeview">
+          <a>
+            <i class="fa fa-files-o"></i>
+            <span>Category</span>
+            <span class="pull-right-container">
+              <span class="label label-primary pull-right">1</span>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ Route('category.index') }}"><i class="fa fa-circle-o"></i> Categories </a></li>
+          </ul>
+        </li>
+
       </ul>
     </section>
     <!-- /.sidebar -->

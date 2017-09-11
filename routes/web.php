@@ -22,10 +22,14 @@ Route::get('/shirts', 'FrontController@shirts')->name('shirts');
 Route::get('/shirt', 'FrontController@shirt')->name('shirt');
 Route::get('/logout', 'Auth\LoginController@logout');
 
+Route::resource('/cart', 'CartController');
+
+
 Route::group(['prefix' => 'admin', 'middleware' => ['auth','role:superadmin']], function(){
     Route::get('/',function () {
         return view('admin.index');
     })->name('admin.index');
     Route::resource('product','ProductsController');
+    Route::resource('category','CategoriesController');
 });
 // Route::get('/kategori', 'KategoriController@index');

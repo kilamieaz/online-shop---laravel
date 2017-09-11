@@ -1,5 +1,5 @@
 <header class="main-header">
-  <a href="home.php" class="logo">
+  <a href="{{ Route('admin.index') }}" class="logo">
     <span class="logo-mini"><b>IT</b>S</span>
     <span class="logo-lg"><b>IT</b>Store</span>
   </a>

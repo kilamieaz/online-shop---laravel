@@ -10,7 +10,8 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        //
+        $products = Product::all();
+        return view('admin.product.index', compact('products'));
     }
 
     public function create()
@@ -21,7 +22,21 @@ class ProductsController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request);
+        // $formInput = $request->except('image');
         $formInput = $request->except('image');
+        // dd($formInput);
+        // validate
+        $this->validate($request, [
+            'name'          => 'required',
+            'description'   => 'required',
+            'size'          => 'required',
+            'price'         => 'numeric',
+            'image'         => 'image|mimes:png,jpg,jpeg|max:10000',
+            'category_id'   => 'required'
+
+        ]);
+
         // image upload
         $image = $request->image;     //data nya
         if($image){
@@ -31,7 +46,7 @@ class ProductsController extends Controller
         }
 
         Product::create($formInput);
-        return redirect()->route('admin.index');
+        return redirect()->route('product.index');
     }
 
     public function show($id)
